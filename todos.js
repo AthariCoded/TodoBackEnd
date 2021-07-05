@@ -7,15 +7,15 @@ const todos = [
   },
   {
     id: 2,
-    name: "Buy apples",
+    name: "Buy books",
     done: true,
-    priority: "middle",
+    priority: "low",
   },
   {
     id: 3,
-    name: "Buy apples",
+    name: "play with cats",
     done: false,
-    priority: "middle",
+    priority: "high",
   },
   {
     id: 4,

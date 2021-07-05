@@ -8,12 +8,12 @@ exports.todosFetch = (req, res) => {
 
 exports.createTodo = (req, res) => {
   // generate ID
-  const index = todos.length;
-  const id = todos[index - 1].id + 1;
+  const id = todos[todos.length - 1].id + 1;
 
   const newTodo = {
-    id,
-    name: "",
+    id: id,
+    // name: "",
+    done: false,
     ...req.body,
   };
   // .push() newProduct onto cookies
@@ -49,6 +49,6 @@ exports.updateFinish = (req, res) => {
     res.status(204).end();
   } else {
     //  give back response 404 todo Not Found
-    res.status(404).json({ message: "Product Not Found." });
+    res.status(404).json({ message: "Todo Not Found." });
   }
 };
